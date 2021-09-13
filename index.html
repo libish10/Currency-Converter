@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/d33d2ea69a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="Container">
+        <form name="myForm" id="myForm" onsubmit="return Converter()">
+            <h2>Currency Converter</h2>
+            <ul>
+                <li><label for="amount" class="Amount">Enter Amount : </label></li>
+                <li><input type="number" id="amount" name="amount" /></li>
+                <li>
+                    <p id="from">From</p>
+                    <p id="to">To</p>
+                </li>
+                <li>
+                    <label for="country1"></label>
+                    <!-- <input list="countryName1" name="country1" id="country1"> -->
+                    <select id="country1" name="country1">
+              <option  id="INR" value="INR"><img src="flagCollection/India.png">INR</option>
+              <option id="USD" value="USD">USD</option>
+              <option id="GBP" value="GBP">GBP</option>
+              <option id="EUR" value="EUR">EUR</option>
+              <option id="LKR" value="LKR">LKR</option>
+            </select>
+
+                    <i class="fas fa-exchange-alt" onclick="ExchangeArrow()"></i>
+                    <label for="country2"></label>
+                    <!-- <input list="countryName2" name="country2" id="country2"> -->
+                    <select id="country2" name="country2">
+              <option id="INR" value="INR">INR</option>
+              <option id="USD" value="USD">USD</option>
+              <option id="GBP" value="GBP">GBP</option>
+              <option id="EUR" value="EUR">EUR</option>
+              <option id="LKR" value="LKR">LKR</option>
+            </select>
+                </li>
+                <li>
+                    <p id="result" name="result"></p>
+                </li>
+                <li>
+                    <input type="submit" value="Get Exchange Rate" id="submit" name="submit" />
+                </li>
+                <li>
+                    <input type="reset" value="Refresh" id="reset" name="reset" onclick="Reset()" />
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <script src="./index.js"></script>
+    <script src="./reset.js"></script>
+    <script src="./ExchangeArrow.js"></script>
+</body>
+
+</html>
